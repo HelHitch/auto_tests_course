@@ -6,22 +6,3 @@ driver = webdriver.Chrome()
 import time
 import math
 
-link = "http://suninjuly.github.io/execute_script.html"
-
-try:
-    driver.get(link)
-    x_element = driver.find_element(By.ID, 'input_value').text
-    x = int(x_element)
-    def calc(x):
-        return str (math.log(abs(12*math.sin(x))))
-    element = calc(x)
-    driver.execute_script("window.scrollBy(0,100);")
-    driver.implicitly_wait(3)
-    answer = driver.find_element(By.ID, 'answer').send_keys(element)
-    checkbox = driver.find_element(By.ID, 'robotCheckbox').click()
-    R_btn = driver.find_element(By.ID, 'robotsRule').click()
-    sbmt = driver.find_element(By.TAG_NAME,'button').click()
-
-finally:
-    time.sleep(1)
-    driver.quit()
