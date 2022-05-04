@@ -1,8 +1,0 @@
-from typing import final
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-
-driver = webdriver.Chrome()
-import time
-import math
-
