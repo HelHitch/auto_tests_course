@@ -38,8 +38,7 @@ class Testing():
         btn = browser.find_element(By.XPATH, "//div/button[@class ='submit-submission' ]").click()
         time.sleep(1)
         string = browser.find_element(By.CLASS_NAME, 'smart-hints__hint')
-        list = []
         if string.text != "Correct!":
-            list.append(string.text)
+            print(string.text)
 
-    print(list)
+
