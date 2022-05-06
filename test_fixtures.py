@@ -6,16 +6,6 @@ import time
 import math
 
 
-
-@pytest.fixture
-def browser():
-    print('---> Browser opened')
-    browser = webdriver.Chrome()
-    yield browser
-    print("---> Browser closed")
-    browser.quit()
-
-
 links = ["https://stepik.org/lesson/236895/step/1",
          "https://stepik.org/lesson/236896/step/1",
          "https://stepik.org/lesson/236897/step/1",
