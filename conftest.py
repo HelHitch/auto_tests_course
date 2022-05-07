@@ -1,3 +1,4 @@
+import pytest
 from selenium import webdriver
 
 def pytest_addoption(parser):
@@ -5,7 +6,7 @@ def pytest_addoption(parser):
                      help="Choose browser: chrome or firefox")
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture()
 def browser(request):
     browser_name = request.config.getoption("browser_name")
     browser = None
